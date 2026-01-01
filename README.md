@@ -1,23 +1,26 @@
-Snake Game (OOP) 🐍
+# Snake Game Engine (OOP) 🐍
 
-A clean, modular implementation of the classic Snake game logic developed in Python using the Turtle library. This project demonstrates the application of Object-Oriented Programming (OOP) to manage game states and entity behaviors.
+A modular 2D game engine developed in Python using the **Turtle** graphics library. This project implements an object-oriented architecture to handle real-time coordinate tracking, entity growth, and collision physics.
 
-🛠️ Technical Overview
+## 🚀 Engine Features
 
-Modular Design: The project is organized into distinct classes for the snake, food, and scoreboard to ensure separation of concerns.
+- **Dynamic Movement Engine**: Utilizes a segment-following algorithm where each part of the snake inherits the position of the previous segment.
+- **Collision Detection Logic**: Real-time monitoring of coordinates to detect boundaries and interactions with food objects.
+- **Automated State Management**: Centralized control for game-over sequences and scoreboard refreshes.
+- **Recursive Entity Generation**: A food system that respawns at randomized coordinates upon collision.
 
-Event Handling: Utilizes the screen.onkey method to capture real-time keyboard inputs for directional control.
+## 🛠️ Project Structure
 
-Boundary Logic: Includes collision detection that monitors coordinates to trigger a game-over sequence if the snake leaves the playable area.
+- `main.py`: The core game loop that orchestrates screen updates and collision checks.
+- `snake.py`: Manages the creation, movement, and directional constraints of the snake entity.
+- `food.py`: Handles the randomized appearance and positioning of target objects.
+- `scoreboard.py`: A dedicated UI module for real-time score tracking and endgame messaging.
 
-Score Management: Features a dedicated Scoreboard class that handles UI updates and score increments whenever food is consumed.
+## 🎮 How to Run
 
-📂 File Structure
-
-main.py: Orchestrates the game loop, screen updates, and collision logic.
-
-snake.py: Defines the snake's initial structure, movement patterns, and directional constraints.
-
-food.py: Handles the randomized positioning and appearance of the target food.
-
-scoreboard.py: Manages the visual display of the score and the game-over message.
+1.  Ensure Python is installed.
+2.  Run the engine:
+    ```bash
+    python main.py
+    ```
+3.  Use **Arrow Keys** to control the snake.
